@@ -9,37 +9,26 @@ import type {
 
 import {
   mobile,
-  backend,
-  creator,
+
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
+
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
+
   WhiteHouse,
   Virtual,
   comprehensive,
   ATechSight,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+
   next,
   bootstrap,
   firebase,
   github,
-  threejs,
   weather,
   malefashion,
   migrantsmart,
@@ -75,6 +64,7 @@ const services: TService[] = [
   
 ];
 
+
 const technologies: TTechnology[] = [
   {
     name: "HTML 5",
@@ -88,7 +78,6 @@ const technologies: TTechnology[] = [
     name: "JavaScript",
     icon: javascript,
   },
- 
   {
     name: "React JS",
     icon: reactjs,
@@ -101,29 +90,28 @@ const technologies: TTechnology[] = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  
   {
-    name: "bootstrap",
+    name: "Bootstrap",
     icon: bootstrap,
   },
- , {
-    name: "figma",
+  {
+    name: "Figma",
     icon: figma,
-  }, {
-    name: "github",
+  },
+  {
+    name: "GitHub",
     icon: github,
   },
   {
-    name: "next",
+    name: "Next.js",
     icon: next,
   },
   {
-    name: "firebase",
+    name: "Firebase",
     icon: firebase,
   },
- 
-
 ];
+
 
 const experiences: TExperience[] = [
   {

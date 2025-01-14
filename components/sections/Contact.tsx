@@ -21,14 +21,14 @@ const Contact = () => {
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-
-  const handleSubmit = async (e) => {
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+  
     // Validate form fields
     const emptyFields = Object.keys(form).filter((key) => !form[key].trim());
     if (emptyFields.length > 0) {
@@ -37,14 +37,14 @@ const Contact = () => {
       });
       return;
     }
-
+  
     setLoading(true);
-
+  
     const formData = {
       access_key: web3formsAccessKey,
       ...form,
     };
-
+  
     try {
       const response = await fetch(web3formsEndpoint, {
         method: "POST",
@@ -53,7 +53,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         setLoading(false);
         toast.success("Thank you! Your message has been sent.", {
@@ -66,7 +66,6 @@ const Contact = () => {
           position: "bottom-right",
         });
         setForm(INITIAL_STATE);
-
       }
     } catch (error) {
       setLoading(false);
@@ -76,6 +75,7 @@ const Contact = () => {
       });
     }
   };
+  
 
   return (
     <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
