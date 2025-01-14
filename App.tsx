@@ -32,7 +32,12 @@ const App = () => {
     <BrowserRouter>
       {loading ? (
         <div className="loader-container">
-          <div className="loader"><img src={loader} alt="" /> </div>
+          <div className="loader">
+            <img src={loader} alt="" /> 
+         </div> 
+         <div className="logo-head">
+             <h2 >Sufiyan Farooq</h2>
+            </div>
         </div>
       ) : (
         <div className="bg-primary relative z-0">
