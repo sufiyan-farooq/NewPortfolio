@@ -57,8 +57,7 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link
-          to="/"
+        <Link to="/"
           className="flex items-center gap-2"
           onClick={() => {
             window.scrollTo(0, 0);
